@@ -12,3 +12,9 @@ Changelog
 ----------
 -002.py
 -Creación de la carpeta "Expresiones Regulares"
+
+02/02/2020
+----------
+-003.py
+-Validator.py
+-02/02/2020 es un palíndromo
