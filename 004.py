@@ -38,4 +38,10 @@ class ParameterManager:
 
 
 parameters = sys.argv[1:]
-print(parameters)
+pm = ParameterManager()
+
+print (pm.analyze(parameters))
+
+"""
+    Falta: imprimir datos en una tabla ASCII
+"""
