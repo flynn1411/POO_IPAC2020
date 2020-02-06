@@ -25,7 +25,7 @@ public class ParameterManager{
 
     public ReponseParameterManager analize (Map<String, String[]> parameters){
     	
-    	List<ParameterAnalysis> results = new ArrayList<>();
+    	List<ParameterAnalysis> results = new ArrayList<ParameterAnalysis>();
         ReponseParameterManager rpm = new ReponseParameterManager();
         
         for (String[] parameter: parameters.values()) {
@@ -40,13 +40,13 @@ public class ParameterManager{
         	 * hobbie=7
         	 */
         	
-        	//Ejemplo primitivo de la generaci�n de la matriz
+        	//Ejemplo primitivo de la generación de la matriz
         	StringBuilder p = new StringBuilder("");
         	for(String element: parameter) {
         		int length;
         		String parameterType;
         		
-        		//Tama�o en caracteres del valor del par�metro
+        		//Tama�o en caracteres del valor del parámetro
         		length = element.length();
         		
         		//element contiene el valor del parametro que se procesa

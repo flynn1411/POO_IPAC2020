@@ -13,13 +13,17 @@ public class ReponseParameterManager{
     /** */
     private List<ParameterAnalysis> results;
     
-	public void setCount(int count2) {
+	public void setCount(int count) {
 		// TODO Auto-generated method stub
-		count = count2;
+		this.count = count;
 	}
 
-	public void setResult(List<ParameterAnalysis> results2) {
-		// TODO Auto-generated method stub
+	public void setResult(List<ParameterAnalysis> results) {
+		this.results = results;
 		
-	}
+    }
+    
+    public List<ParameterAnalysis> getResults(){
+        return this.results;
+    }
 }
