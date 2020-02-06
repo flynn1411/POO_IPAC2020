@@ -1,12 +1,12 @@
 <%@page import="Unidad1.ParameterManager"%>
-<%@ page language="java" contentType="text/html; charset=" %>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="author" content="Programación Orientada a Objetos">
-        <meta name="description" content="Ejemplo de Validación Usando Objetos">
+        <meta name="description" content="Ejemplo de Validacin Usando Objetos">
         <title>Ejemplo</title>
     </head>
     <body>
