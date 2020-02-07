@@ -24,7 +24,7 @@ Todos si no la mayoría de los códigos vistos en Programación Orientada a Obje
 
 *04/02/2020*
 ----------
-- Creación de la carpeta "Java Web", en donde se pueden encontrar los archivos .java y .jsp para poder probarlos en el IDE Eclipse Enterprise(versión actual: **JEE 2019-12-R x64**). Colocar la carpeta "POO" en el folder local de la maquina llamado "eclipse-workspace" y asegurarse de utilizar Apache Tomcat.&nbsp;
+- Creación de la carpeta "Java Web", en donde se pueden encontrar los archivos .java y .jsp para poder probarlos en el IDE Eclipse Enterprise(versión actual: **[JEE 2019-12-R x64](https://www.eclipse.org/downloads/packages/release/2019-12/r/eclipse-ide-enterprise-java-developers)**). Colocar la carpeta "POO" en el folder local de la maquina llamado "eclipse-workspace" y asegurarse de utilizar Apache Tomcat.&nbsp;
 - 'Java Web'/POO/'Web Content'/Unidad1/Validation/004/**index.jsp**&nbsp;
 - 'Java Web'/POO/src/Unidad1/**ParameterManager.java**&nbsp;
 - 'Java Web'/POO/src/Unidad1/**ResponseParameterManager.java**&nbsp;
