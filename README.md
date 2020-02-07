@@ -35,4 +35,4 @@ Todos si no la mayoría de los códigos vistos en Programación Orientada a Obje
 
 *06/02/2020*
 -----------
-- Completación del proyecto "Unidad1" en Java Web &nbsp;
+- Completación del proyecto "Validación" en Java Web &nbsp;
