@@ -7,7 +7,7 @@ package Unidad1;
  */
 public class ParameterAnalysis {
 	
-	/** Contiene el valor del par√°metro */
+	/** Contiene el valor del par·metro */
 	private String value;
 	
 	/** Contiene la longitud del elemento */

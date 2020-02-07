@@ -1,4 +1,5 @@
 <%@page import="Unidad1.ParameterManager"%>
+<%@page import="Unidad1.ResponseParameterManager"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
 
 <!DOCTYPE html>
@@ -12,7 +13,16 @@
     <body>
         <%
             ParameterManager pm = new ParameterManager();
-            pm.analize(request.getParameterMap());
+        
+        	/**
+        	  * Probar Ingresando los siguientes parámetros al final del
+        	  * link: ?hola="mundo"&a=0&blah="sup"
+        	  */
+        	
+        	ResponseParameterManager rpm = new ResponseParameterManager();
+            rpm = pm.analyze(request.getParameterMap());
+            
+            out.print(pm.convertResponseToHTML(rpm));
         %>
     </body>
 </html>
