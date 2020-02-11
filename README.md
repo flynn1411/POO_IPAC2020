@@ -41,3 +41,9 @@ Todos si no la mayoría de los códigos vistos en Programación Orientada a Obje
 -----------
 - 'Java Web'/POO/'Web Content'/Unidad1/005/**index.jsp** &nbsp;
 - 'Java Web'/POO/'Web Content'/Unidad1/005/**service.jsp** &nbsp;
+
+*10/02/2020*
+-----------
+- 'Java Web'/POO/'Web Content'/Unidad1/006/**index.jsp** &nbsp;
+- 'Java Web'/POO/'Web Content'/Unidad1/006/**service.jsp** &nbsp;
+- 'Java Web'/POO/src/Unidad1/**User.java**&nbsp;
