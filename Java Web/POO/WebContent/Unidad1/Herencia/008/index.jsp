@@ -30,16 +30,17 @@
 				<ption value="CO">Colombia</ption>				
 			</select>
 			-->
-			<select name="htmlTAG">
+			<p>Seleccione una etiqueta a agregar.</p><br>
+			<select name="htmlTag">
 				<option value="0">Span</option>
 				<option value="1">Paragraph</option>
 				<option value="2">Anchor</option>
 				<option value="3">Division</option>
-			</select>
+			</select><br><br>
 
-			<textarea rows="3" cols=8>
+			<textarea name="htmlContent" rows="3" cols=8>
 				
-			</textarea>
+			</textarea><br><br>
 			
 			<button type="submit">Enviar Formulario</button>
 
