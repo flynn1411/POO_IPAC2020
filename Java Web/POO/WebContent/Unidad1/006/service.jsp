@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="author" content="swd">
-		<meta author="description" content="Validación de campos de texto">
+		<meta name="description" content="Validación de campos de texto">
 		<title>Validación de campos de texto</title>
 	</head>
 	<body>
