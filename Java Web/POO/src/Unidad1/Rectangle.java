@@ -13,16 +13,35 @@ public class Rectangle{
 
      public Rectangle(){}
 
-     public String draw(Point p, int h, int w){
+     public String draw(Point p, int h, int w, String color, int times){
+        if(times == 0){
+           return this.draw(p, h, w, color);
+        }
+        else{
+           return this.draw(p, h, w, color).replace("&nbsp", this.draw(p, h, w, color, times-1));
+        }
+     }
 
-        StringBuilder result = new StringBuilder("");
+     public String draw(Point p, int h, int w, String color){
+
+        StringBuilder result = new StringBuilder(
+           String.format("<div style='border 1px solid black; background-color: %s; position: fixed; top: %svh; left: %svw; width: %svw; height: %svh;'>&nbsp;</div>",
+           color,
+           p.getY(),
+           p.getX(),
+           w,
+           h)
+        );
+   
         return result.toString();
      }
 
-     public String draw(Point pointA, Point pointB){
+     public String draw(Point pointA, Point pointB, String color){
 
-        StringBuilder result = new StringBuilder("");
-        return result.toString();
+        int h = pointB.getY();
+        int w = pointB.getX();
+        
+        return this.draw(pointA, h, w, color);
      }
 
 }

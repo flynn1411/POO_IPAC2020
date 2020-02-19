@@ -1,3 +1,5 @@
+<%@page import="Unidad1.Point"%>
+<%@page import="Unidad1.Rectangle"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,6 +14,9 @@
 		<%
 
             /** 
+                Resuelva el problema usando recursividad em la figura.
+                ------------------------------------------------------
+
                 Haga un programa en Java que pueda crear una figura rectangular usando la etiqueta
                 div de HTML. Usando la propiedad polimórfica de la 00, la figura se puede crear mediante:
                 1.)Punto de orígen, altura, anchura.
@@ -49,31 +54,40 @@
                     100
                  );
 
+                 String color;
+                 if( request.getParameter("color") != null ){
+                     color = validator.color(request.getParameter("color").toString());
+
+                 }else{
+                     color = "white";
+                 }
+
                  Rectangle rectangle = new Rectangle();
 
                 out.print(
-                    rectangle.draw(p, h, w)
+                    rectangle.draw(p, h, w, color)
                 );
             }
             else if(
                 request.getParameter("pointA") != null &&
-                request.getParameter("pointA") .toString().trim(),matches("\\d+, \\d+") != null &&
+                request.getParameter("pointA").toString().trim().matches("\\d+, \\d+")&&
                 request.getParameter("pointB") != null &&
-                request.getParameter("pointB") .toString().trim(),matches("\\d+, \\d+") != null
+                request.getParameter("pointB").toString().trim().matches("\\d+, \\d+")&&
+                request.getParameter("color") != null
             ){
 
-                RectanglePoint pointA = new RectanglePoint(
+                Point pointA = new Point(
                     request.getParameter("pointA") .toString()
                 );
 
-                RectanglePoint pointB = new RectanglePoint(
+                Point pointB = new Point(
                     request.getParameter("pointB") .toString()
                 );
 
                 Rectangle rectangle = new Rectangle();
 
                 out.print(
-                    rectangle.draw(pointA, pointB)
+                    rectangle.draw(pointA, pointB, color)
                 );
 
             }

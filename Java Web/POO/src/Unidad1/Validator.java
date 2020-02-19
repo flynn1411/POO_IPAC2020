@@ -1,7 +1,7 @@
 package Unidad1;
 
 /** 
- * Permite limpiar y validar distintos tipos de parámetros para la gestión de usuarios
+ * Permite limpiar y validar distintos tipos de parï¿½metros para la gestiï¿½n de usuarios
  * @author swd
  * @version 0.1.0 
  **/
@@ -9,9 +9,9 @@ package Unidad1;
 public class Validator {
 
 	/**
-	  * Procesa un nombre de ususario y devuelve una cadena válida.
+	  * Procesa un nombre de ususario y devuelve una cadena vï¿½lida.
 	  * @param userName El nombre de usuario
-	  * @return El nombre de usuario limpio de caracteres inválidos
+	  * @return El nombre de usuario limpio de caracteres invï¿½lidos
 	  */
 	public String cleanUserName(String userName) {
 		
@@ -23,7 +23,7 @@ public class Validator {
 	/** 
 	 * Procesa una eda de usuario y devuelve la cadena validar.
 	 * @param age Edad del usuario
-	 * @return Un valor numérico (entero) con la edad del usuario.
+	 * @return Un valor numï¿½rico (entero) con la edad del usuario.
 	 */
 	public int cleanAge(String age) {
 		
@@ -39,6 +39,22 @@ public class Validator {
 	public String cleanHTMLContent(String htmlContent) {
 		htmlContent = htmlContent.trim().replaceAll("</?[^>]+>", "");
 		return htmlContent;
+	}
+
+	/** 
+	 * Permite validar un parÃ¡metro color. Si el parÃ¡metro no tiene la forma de un color, se retorna el color rojo.
+	 * @param colo Cadena con el formato del color
+	 * @return El color vÃ¡lido
+	 */
+	public String color(String color){
+		color = color.trim();
+
+		if(color.matches("(([a-z]{3,8})|(#([\\da-f]{2}){3}))")){
+			return color;
+		}
+		else{
+			return "red";
+		}
 	}
 	
 }
