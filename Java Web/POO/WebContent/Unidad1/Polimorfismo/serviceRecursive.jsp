@@ -1,3 +1,4 @@
+<%@page import="Unidad1.Point"%>
 <%@page import="Unidad1.Rectangle"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -32,8 +33,10 @@
             Rectangle rectangle = new Rectangle();
 
             out.print(
-                rectangle.draw("0,0", 40, 40, "red" , 5)
+                rectangle.draw(new Point("0,0"), 40, 40, "red" , 5, 5)
             );
+            
+            String[] colors = new String[]{"red", "blue", "green", "brown", "black"};
             
         %>
 	</body>

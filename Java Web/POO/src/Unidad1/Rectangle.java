@@ -8,40 +8,42 @@ package Unidad1;
 
 public class Rectangle{
     /** 
-     * Constructor vacío de clase
+     * Constructor vacio de clase
      */
 
      public Rectangle(){}
 
-     public String draw(Point p, int h, int w, String color, int times){
+     public String draw(Point p, int h, int w, String color, int times, int zIndex){
         if(times == 0){
-           return this.draw(p, h, w, color);
+           return this.draw(p, h, w, color, zIndex);
         }
         else{
-           return this.draw(p, h, w, color).replace("&nbsp", this.draw(p, h, w, color, times-1));
+        	Point newPoint = new Point( String.format(" %s, %s", p.getX()+2, p.getY() +2) );
+        	return this.draw(p, h, w, color, zIndex).replace("&nbsp", this.draw(newPoint, h, w, color, zIndex-1, times-1));
         }
      }
 
-     public String draw(Point p, int h, int w, String color){
+     public String draw(Point p, int h, int w, String color, int zIndex){
 
         StringBuilder result = new StringBuilder(
-           String.format("<div style='border 1px solid black; background-color: %s; position: fixed; top: %svh; left: %svw; width: %svw; height: %svh;'>&nbsp;</div>",
+           String.format("<div style='border 1px solid black; background-color: %s; position: fixed; top: %svh; left: %svw; width: %svw; height: %svh; z-index: %s;'>&nbsp;</div>",
            color,
            p.getY(),
            p.getX(),
            w,
-           h)
+           h,
+           zIndex)
         );
    
         return result.toString();
      }
 
-     public String draw(Point pointA, Point pointB, String color){
+     public String draw(Point pointA, Point pointB, String color, int zIndex){
 
         int h = pointB.getY();
         int w = pointB.getX();
         
-        return this.draw(pointA, h, w, color);
+        return this.draw(pointA, h, w, color, zIndex);
      }
 
 }

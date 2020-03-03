@@ -40,6 +40,11 @@ public class Validator {
 		htmlContent = htmlContent.trim().replaceAll("</?[^>]+>", "");
 		return htmlContent;
 	}
+	
+	public int maxInt(String number, int min, int max) {
+		
+		return Integer.parseInt(number);
+	}
 
 	/** 
 	 * Permite validar un parámetro color. Si el parámetro no tiene la forma de un color, se retorna el color rojo.
@@ -49,8 +54,11 @@ public class Validator {
 	public String color(String color){
 		color = color.trim();
 
-		if(color.matches("(([a-z]{3,8})|(#([\\da-f]{2}){3}))")){
+		if( color.matches("([a-z]{3,8})") ){
 			return color;
+		}
+		else if( color.matches("([\\\\da-f]{2}){3})") ) {
+			return String.format("#%s", color);
 		}
 		else{
 			return "red";

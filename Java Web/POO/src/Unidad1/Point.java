@@ -19,8 +19,8 @@ public class Point{
         if(pointAsString.matches("\\d+, \\d+")) {
 
             String[] temporalPoint = pointAsString.split(",");
-            this.x = Integer.parseInt(temporalPoint[0]);
-            this.y = Integer.parseInt(temporalPoint[1]);
+            this.x = Integer.parseInt(temporalPoint[0].toString().trim());
+            this.y = Integer.parseInt(temporalPoint[1].toString().trim());
 
         }
 

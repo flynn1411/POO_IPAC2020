@@ -1,3 +1,4 @@
+<%@page import="Unidad1.Validator"%>
 <%@page import="Unidad1.Point"%>
 <%@page import="Unidad1.Rectangle"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -29,6 +30,7 @@
                         PointA = 1,2 &
                         pointB = 2
             */
+            String color;
             if(
                 request.getParameter("point") != null &&
                 //request.getParameter("point") .toString().trim(),matches("\\d+, \\d+") != null &&
@@ -54,7 +56,6 @@
                     100
                  );
 
-                 String color;
                  if( request.getParameter("color") != null ){
                      color = validator.color(request.getParameter("color").toString());
 
@@ -64,9 +65,9 @@
 
                  Rectangle rectangle = new Rectangle();
 
-                out.print(
+              /*  out.print(
                     rectangle.draw(p, h, w, color)
-                );
+                );*/
             }
             else if(
                 request.getParameter("pointA") != null &&
@@ -75,7 +76,8 @@
                 request.getParameter("pointB").toString().trim().matches("\\d+, \\d+")&&
                 request.getParameter("color") != null
             ){
-
+            	Validator validator= new Validator();
+            	
                 Point pointA = new Point(
                     request.getParameter("pointA") .toString()
                 );
@@ -83,12 +85,14 @@
                 Point pointB = new Point(
                     request.getParameter("pointB") .toString()
                 );
+                
+                color = validator.color(request.getParameter("color").toString());
 
                 Rectangle rectangle = new Rectangle();
 
-                out.print(
-                    rectangle.draw(pointA, pointB, color)
-                );
+               /* out.print(
+                    //rectangle.draw(pointA, pointB, color)
+                );*/
 
             }
             else{
